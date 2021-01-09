@@ -5,6 +5,8 @@ let win=1;
 let lose=1
 let days=1
 let amount_for_days=0;
+let luckiest_day=0;
+let unluckiest_day=0;
 class Gambler{
     getGame(){
         while(days<=20){
@@ -16,6 +18,7 @@ class Gambler{
                     if(stake>=150){
                         console.log("the amonut won ",stake-INITIAL_STAKE)
                         console.log("winning day",days)
+                        luckiest_day++
                         amount_for_days=amount_for_days+stake;
                         days++
                         break;
@@ -27,6 +30,7 @@ class Gambler{
                     if(stake<=50){
                         console.log("the amount lost ",Math.abs(stake-INITIAL_STAKE))
                         console.log("losing day",days)
+                        unluckiest_day++
                         amount_for_days=amount_for_days+stake
                         days++
                         break;
@@ -36,6 +40,8 @@ class Gambler{
             stake=100;
         }
         console.log("amoutnt after 20 days",amount_for_days)
+        console.log("number of luckiest days are ",luckiest_day)
+        console.log("number of unluckiest days are ",unluckiest_day)
     }    
 }
 module.exports=new Gambler();
