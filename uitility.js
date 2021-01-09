@@ -9,11 +9,17 @@ class Gambler{
         if(result==1){
             console.log("won the game")
             stake=stake+win
+            if(stake>=150){
+                break;
+            }
             
         }
         if(result==2){
             console.log("lost the game")
             stake=stake-lose
+            if(stake<=50){
+                break;
+            }
         }
     }
 }
