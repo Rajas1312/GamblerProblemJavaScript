@@ -14,6 +14,8 @@ class Gambler{
                     console.log("won the game")
                     stake=stake+win
                     if(stake>=150){
+                        console.log("the amonut won ",stake-INITIAL_STAKE)
+                        console.log("winning day",days)
                         amount_for_days=amount_for_days+stake;
                         days++
                         break;
@@ -23,6 +25,8 @@ class Gambler{
                     console.log("lost the game")
                     stake=stake-lose
                     if(stake<=50){
+                        console.log("the amount lost ",Math.abs(stake-INITIAL_STAKE))
+                        console.log("losing day",days)
                         amount_for_days=amount_for_days+stake
                         days++
                         break;
