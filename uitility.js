@@ -42,6 +42,20 @@ class Gambler{
         console.log("amoutnt after 20 days",amount_for_days)
         console.log("number of luckiest days are ",luckiest_day)
         console.log("number of unluckiest days are ",unluckiest_day)
+    }
+    checkForPlayAnother=()=>{
+        if(luckiest_day>unluckiest_day){
+            stake=100;
+            win=1;
+            lose=1
+            days=1
+            amount_for_days=0;
+            luckiest_day=0;
+            unluckiest_day=0;
+            this.getGame()
+        }else{
+            console.log("gambler dose not want to play more")
+        }
     }    
 }
 module.exports=new Gambler();
