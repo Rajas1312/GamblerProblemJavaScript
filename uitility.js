@@ -36,6 +36,6 @@ class Gambler{
             stake=100;
         }
         console.log("amoutnt after 20 days",amount_for_days)
-    }
+    }    
 }
 module.exports=new Gambler();
